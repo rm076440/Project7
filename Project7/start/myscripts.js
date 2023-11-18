@@ -1,25 +1,39 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
+var imgArray = new Array(
+    'CoupleSailingLg.jpg',
+    'PigLg.jpg',
+    'SaladLg.jpg',
+    'StorkLg.jpg'
+);
 
-<body onload="preloadImages()">
-    <div>
-        <a href="" onmouseover="document.getElementById('print').src='Images/Print2.png';"
-            onmouseout="document.getElementById('print').src='Images/Print1.png';">
 
-            <img src="Images/Print1.png" alt="Print Page" width="200px" height="50px" id="print">
+var titleArray = new Array(
+    'Newlyweds Sailing',
+    'Boy and His Pig',
+    'Yummy Salad',
+    'Stork at Sunset'
+);
+    
+var imgPath = "Images/Fullsize/";
 
-        </a>
-    </div>
-    <div>
-        <a href="" onmouseover="document.getElementById('logo').src='Images/Logo2.png';"
-            onmouseout="document.getElementById('logo').src='Images/Logo.png';">
+function swapImage(imgID) {
 
-            <img src="Images/Logo.png" alt="Logo" width="150px" height="175px" id="logo">
+    var theImage = document.getElementById('theImage');
+    var textDiv = document.getElementById('bottomText');
 
-        </a>
-    </div>
-</html>
+    var newImg;
+    var textTitle;
+
+    newImg = imgArray[imgID];
+    theImage.src = imgPath + newImg;
+
+    textTitle=titleArray[imgID];
+
+          textDiv.innerHTML = textTitle;
+}
+    
+function preloadImages() {		
+    for(var i = 0; i < imgArray.length; i++) {
+        var tmpImg = new Image;
+        tmpImg.src = imgPath + imgArray[i];
+    }
+}
