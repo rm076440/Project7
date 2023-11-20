@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Native Cooking Home</title>
+    <link rel="stylesheet" href="mystyles.css">
+    <script type="text/javascript" src="myscripts.js"></script>
+</head>
+
+<body onload="preloadImages()">
+
+    <div id="container">
+        <header>
+            <img src="Images/logo.png" alt="Logo">
+            <img src="Images/banner.png" alt="Banner">
+            <nav>
+                <ul class="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Tributes</a></li>
+                    <li><a href="#">Survey</a></li>
+                    <li><a href="#">Favorites</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <article>
+                <h1>
+                    Welcome to Native Cooking of Utah!
+                </h1>
+                <p>
+                    If you love to cook like we do, you should enjoy looking around this site.
+                </p>
+                <p>
+                    Take a look at our Recipes and take the opportunity to complete our
+                    survey.
+                </p>
+                <!--Image Swap -->
+                <div class="imgswap">
+                    <h1>Image Swap Example</h1>
+                    <p class="instructions">[Instructions: Mouse over small images to see larger image.]</p>
+
+                    <div id="thumbs">
+                        <img src="Images/Thumbnails/Image1Sm.png" alt="Professional Chef" onmouseover="swapImage(0);" />
+                        <img src="Images/Thumbnails/Image2Sm.png" alt="Fresh Cupcake" onmouseover="swapImage(1);" />
+                        <img src="Images/Thumbnails/Image3Sm.png" alt="Warm Cookies" onmouseover="swapImage(2);" />
+                        <img src="Images/Thumbnails/Image4Sm.png" alt="Garden-made Salad" onmouseover="swapImage(3);" />
+                        <br />
+                    </div>
+                    <div id="image">
+                        <img id="theImage" src="Images/FullSize/Image1Lg.png" alt="Preview" />
+                        <h3 id="bottomText">Professional Chef</h3>
+                    </div>
+                </div>
+                <div class="tributes-snippet">
+                    <!--Chunk from Tribute Page-->
+                    <p><a>
+                            <!--Link to tribute page-->More
+                        </a></p>
+                </div>
+            </article>
+        </section>
+        <footer id="footer">
+            <p><a href="email:this@gmail.com" style="color:#D0D0D0">Email the Owners</a></p>
+            <p>This web site has been created solely for educational purposes.</p>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
